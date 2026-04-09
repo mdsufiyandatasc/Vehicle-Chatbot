@@ -34,10 +34,9 @@ vehicle-chatbot/
 │── README.md            # Project documentation
 ## ⚙️ Installation & Setup
 1. Clone the Repository
-git clone https://github.com/your-username/vehicle-chatbot.git
-cd vehicle-chatbot
-2. Install Dependencies
-pip install -r requirements.txt
+ git clone https://github.com/your-username/vehicle-chatbot.gitcd vehicle-chatbot
+ 2. Install Dependencies
+ pip install  -r requirements.txt
 3. Configure Environment Variables
 
 Create a .env file and add your API key:
