@@ -1,66 +1,72 @@
-🚗 Vehicle Chatbot (GenAI Project)
+🚗 Vehicle Chatbot (Generative AI Project)
 
-A conversational AI chatbot built using LangChain and Google Gemini (LLM) that provides accurate and controlled information about two-wheelers and four-wheelers.
+A domain-restricted conversational AI chatbot built using LangChain and Google Gemini (LLM). The application is designed to provide accurate information exclusively about two-wheelers and four-wheelers, while maintaining contextual conversation using chat history.
 
-🚀 Features
-💬 Conversational chatbot with memory (chat history)
-🧠 Prompt engineering for controlled responses
-🚫 Restricts answers to vehicle-related queries only
-👤 Remembers user name and handles basic interactions
-⚡ Fast responses using Gemini (LLM)
+📌 Overview
+
+This project demonstrates the practical implementation of Generative AI and Large Language Models (LLMs) for building a controlled, domain-specific chatbot. It leverages prompt engineering techniques to ensure that responses remain relevant, consistent, and aligned with predefined business rules.
+
+🚀 Key Features
+Domain-Specific Responses: Handles queries strictly related to vehicles (cars, bikes, SUVs, etc.)
+Prompt Engineering: Enforces structured behavior using system-level instructions
+Conversational Memory: Maintains chat history for context-aware interactions
+User Interaction Handling: Supports greetings, name recognition, and follow-up queries
+Response Control: Filters out irrelevant queries with predefined fallback responses
 🧠 Tech Stack
-Python
-LangChain
-Google Gemini API
-Prompt Engineering
-dotenv (Environment Variables)
-📊 How It Works
-Uses LangChain message framework to manage conversation
-Maintains chat history for contextual understanding
-Applies system rules (prompt engineering) to control responses
-Uses Gemini LLM for generating answers
-⚙️ Setup Instructions
-1️⃣ Clone the Repository
+Programming Language: Python
+Framework: LangChain
+LLM: Google Gemini (via langchain-google-genai)
+Environment Management: python-dotenv
+⚙️ System Architecture
+
+The chatbot operates using:
+
+System Message: Defines rules and constraints (prompt engineering)
+Human Messages: Captures user inputs
+AI Messages: Stores model-generated responses
+Chat History: Ensures continuity and contextual understanding
+📂 Project Structure
+vehicle-chatbot/
+│── app.py                # Main application script
+│── requirements.txt     # Project dependencies
+│── .env                 # API keys (not included in repo)
+│── .gitignore           # Ignored files
+│── README.md            # Project documentation
+⚙️ Installation & Setup
+1. Clone the Repository
 git clone https://github.com/your-username/vehicle-chatbot.git
 cd vehicle-chatbot
-2️⃣ Install Dependencies
+2. Install Dependencies
 pip install -r requirements.txt
-3️⃣ Add API Key
+3. Configure Environment Variables
 
-Create a .env file and add:
+Create a .env file and add your API key:
 
 GOOGLE_API_KEY=your_api_key_here
-4️⃣ Run the Application
+4. Run the Application
 python app.py
-💡 Example Usage
+💡 Sample Interaction
 You: Hello  
-AI: Hello! Please ask about vehicles.
+AI: Hello! Please ask about vehicles.  
 
 You: My name is Sufiyan  
-AI: Nice to meet you Sufiyan! Please ask about vehicles.
+AI: Nice to meet you Sufiyan! Please ask about vehicles.  
 
-You: Best bike under 1 lakh?  
-AI: (Provides answer)
+You: Best SUV under 10 lakh?  
+AI: [Relevant vehicle information]  
 
 You: What is my name?  
-AI: Your name is Sufiyan.
-📁 Project Structure
-vehicle-chatbot/
-│── app.py
-│── requirements.txt
-│── .env
-│── .gitignore
-│── README.md
-🎯 Key Learnings
-Prompt engineering for domain-restricted chatbots
-Working with LLM APIs (Google Gemini)
-Managing conversational memory using LangChain
-Building rule-based AI assistants
-🔮 Future Improvements
-🌐 Add Streamlit web interface
-🧾 Integrate database for long-term memory
-🔍 Implement RAG (Retrieval-Augmented Generation)
-🚀 Deploy as a web application
-🤝 Contributing
+AI: Your name is Sufiyan.  
+🎯 Key Learnings & Outcomes
+Applied prompt engineering to control LLM behavior
+Built a context-aware chatbot using LangChain
+Integrated Google Gemini API for real-time response generation
+Designed a rule-based AI system to handle domain-specific queries
+🔮 Future Enhancements
+Develop a web interface using Streamlit
+Implement Retrieval-Augmented Generation (RAG) for improved accuracy
+Add database integration for persistent memory
+Deploy the application on cloud platforms (e.g., Render, Hugging Face)
+👨‍💻 Author
 
-Contributions are welcome! Feel free to fork the repo and submit a pull request.
+Mohammad Sufiyan
